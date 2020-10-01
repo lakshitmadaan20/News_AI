@@ -17,6 +17,7 @@ const App = () => {
   const [newsArticles, setNewsArticles ] = useState([])
   const [activeArticle, setActiveArticle] = useState(-1);
   const [isOpen, setIsOpen] = useState(false);
+  // const [showFeedback, setShowFeedback] = useState(false);
 
   useEffect(() => {
     alanBtn({
@@ -27,6 +28,7 @@ const App = () => {
           setActiveArticle(-1)
         } else if (command === 'instructions'){
           setIsOpen(true)
+        
         }else if(command === 'highlight'){
           setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
         } else if(command === 'open'){
@@ -60,7 +62,7 @@ const App = () => {
       <img src="https://alan.app/voice/images/previews/preview.jpg" className={classes.alanLogo} alt="logo" />
     </div>
     <Cards articles={newsArticles} activeArticle={activeArticle} />
-    <Modal isOpen={isOpen} setIsOpen={setIsOpen} />
+    <Modal isOpen={isOpen} setIsOpen={setIsOpen}  />
   </div>
   );
 }

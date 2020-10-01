@@ -3,7 +3,7 @@ import { Typography, Divider, Chip, TextField, Button } from '@material-ui/core'
 import SimpleModal from '@material-ui/core/Modal';
 import emailjs from 'emailjs-com';
 
-import useStyles from './style3.js';
+import useStyles from './style3';
 
 const Modal = ({ isOpen, setIsOpen, showFeedback }) => {
   const classes = useStyles();
